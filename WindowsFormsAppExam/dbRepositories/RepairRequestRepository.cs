@@ -13,7 +13,7 @@ namespace WindowsFormsAppExam.dbRepositories
     {
         public void addRequest(RepairRequest repairRequest)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("INSERT INTO repair_request (date_of_create, date_of_completion, item_name, typeequipment, problemdescription, clientid, userid, request_status) " +
@@ -38,7 +38,7 @@ namespace WindowsFormsAppExam.dbRepositories
             ClientRepository clientRepository = new ClientRepository();
             UserRepository userRepository = new UserRepository();
             List<RepairRequest> repairRequests = new List<RepairRequest>();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM repair_request ORDER BY id", con))
@@ -73,7 +73,7 @@ namespace WindowsFormsAppExam.dbRepositories
             UserRepository userRepository = new UserRepository();
             ClientRepository clientRepository = new ClientRepository();
             RepairRequest repairRequest = new RepairRequest();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM repair_request WHERE id = @id ORDER BY id", con))
@@ -104,7 +104,7 @@ namespace WindowsFormsAppExam.dbRepositories
             UserRepository userRepository = new UserRepository();
             ClientRepository clientRepository = new ClientRepository();
             List<RepairRequest> repairRequests = new List<RepairRequest>();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM repair_request WHERE item_name LIKE '%' || @findString || '%' " +
@@ -137,7 +137,7 @@ namespace WindowsFormsAppExam.dbRepositories
         }
         public void removeClientById(int id)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("DELETE FROM repair_request WHERE id = @id", con))
@@ -150,7 +150,7 @@ namespace WindowsFormsAppExam.dbRepositories
         }
         public void updateRequestById(RepairRequest repairRequest)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("UPDATE repair_request SET date_of_create = @date_of_create, date_of_completion = @date_of_completion, " +

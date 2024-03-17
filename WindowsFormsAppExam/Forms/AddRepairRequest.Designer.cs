@@ -142,7 +142,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxItemName);
             this.Name = "AddRepairRequest";
-            this.Text = "AddRepairRequest";
+            this.Text = "Добавление заявки";
             this.ResumeLayout(false);
             this.PerformLayout();
 

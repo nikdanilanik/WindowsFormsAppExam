@@ -154,7 +154,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxFIO);
             this.Name = "UpdateClient";
-            this.Text = "UpdateClient";
+            this.Text = "Обновление клиента";
             this.ResumeLayout(false);
             this.PerformLayout();
 

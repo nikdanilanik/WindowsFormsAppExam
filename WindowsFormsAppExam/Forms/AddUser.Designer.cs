@@ -141,7 +141,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
             this.Name = "AddUser";
-            this.Text = "AddUser";
+            this.Text = "Добавление пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();
 

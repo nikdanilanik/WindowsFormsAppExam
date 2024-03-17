@@ -120,7 +120,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
             this.Name = "AddClient";
-            this.Text = "AddClient";
+            this.Text = "Добавление клиета";
             this.ResumeLayout(false);
             this.PerformLayout();
 

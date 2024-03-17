@@ -72,7 +72,7 @@
             this.Controls.Add(this.buttonUpdateStatus);
             this.Controls.Add(this.textBoxStatusRequest);
             this.Name = "TrackRequest";
-            this.Text = "TrackRequest";
+            this.Text = "Отслеживание заявки";
             this.ResumeLayout(false);
             this.PerformLayout();
 

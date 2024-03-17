@@ -76,7 +76,7 @@
             this.Controls.Add(this.textBoxFind);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListClients";
-            this.Text = "ListClients";
+            this.Text = "Список клиентов";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -13,7 +13,7 @@ namespace WindowsFormsAppExam.dbRepositories
     {
         public void addClient(Client client)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("INSERT INTO client (name, phone_number, email) VALUES (@name, @phone_number, @email)", con))
@@ -30,7 +30,7 @@ namespace WindowsFormsAppExam.dbRepositories
         public List<Client> getAllClients()
         {
             List<Client> clients = new List<Client>();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM client ORDER BY id", con))
@@ -58,7 +58,7 @@ namespace WindowsFormsAppExam.dbRepositories
         public Client getClientById(int id)
         {
             Client client = new Client();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM client WHERE id = @id", con))
@@ -82,7 +82,7 @@ namespace WindowsFormsAppExam.dbRepositories
         public List<Client> getClientByPhoneNumberOrName(string findString)
         {
             List<Client> clients = new List<Client>();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM client WHERE phone_number LIKE '%' || @findString || '%' " +
@@ -110,7 +110,7 @@ namespace WindowsFormsAppExam.dbRepositories
         }
         public void removeClientById(int id)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("DELETE FROM client WHERE id = @id", con))
@@ -124,7 +124,7 @@ namespace WindowsFormsAppExam.dbRepositories
         }
         public void updateClientById(Client client)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("UPDATE client SET name = @name, phone_number = @phone_number, email = @email WHERE id = @id", con))

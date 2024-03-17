@@ -175,7 +175,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxLogin);
             this.Name = "UpdateUser";
-            this.Text = "UpdateUser";
+            this.Text = "Обновление пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();
 

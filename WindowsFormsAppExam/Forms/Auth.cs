@@ -31,7 +31,7 @@ namespace WindowsFormsAppExam.Forms
             //user = userRepository.getUserByPasswordAndLogin(textBoxLogin.Text, textBoxPassword.Text);
             //if (user != null)
             //{
-            //    ConstDataDB.CURRENTUSER = user;
+            //    ConstDataDB.CURRENT_USER = user;
             //    this.Hide();
             //    Form1 form = new Form1();
             //    form.FormClosed += (s, args) => this.Close();
@@ -46,7 +46,7 @@ namespace WindowsFormsAppExam.Forms
         private void AuthwithoutAuthForAdmin()
         {
             user = new User(3, "Иванов", "admin1", "qwe", "admin");
-            ConstDataDB.CURRENT_USER = user;
+            ConstData.CURRENT_USER = user;
             this.Hide();
             Form1 form = new Form1();
             form.FormClosed += (s, args) => this.Close();

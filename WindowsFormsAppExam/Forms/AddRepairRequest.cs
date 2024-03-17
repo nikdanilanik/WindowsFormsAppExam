@@ -33,7 +33,7 @@ namespace WindowsFormsAppExam.Forms
                 textBoxTypeEquipment.Text,
                 textBoxProblemDesc.Text,
                 new Client(Convert.ToInt32(textBoxClientId.Text), null, null, null),
-                ConstDataDB.CURRENT_USER,
+                ConstData.CURRENT_USER,
                 "Подано");
             RepairRequestRepository requestRepository = new RepairRequestRepository();
             requestRepository.addRequest(repairRequest);

@@ -168,7 +168,7 @@
             this.Controls.Add(this.deleteDefaultRepos);
             this.Controls.Add(this.createDefaultRepos);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Управление";
             this.ResumeLayout(false);
 
         }

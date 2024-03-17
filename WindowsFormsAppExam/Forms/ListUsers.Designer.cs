@@ -110,7 +110,7 @@
             this.Controls.Add(this.textBoxFind);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListUsers";
-            this.Text = "ListUsers";
+            this.Text = "Список пользователей";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

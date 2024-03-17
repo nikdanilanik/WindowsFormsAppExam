@@ -95,7 +95,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConstDataDB.cs" />
+    <Compile Include="ConstData.cs" />
     <Compile Include="dbRepositories\ClientRepository.cs" />
     <Compile Include="dbRepositories\ConnectionDB.cs" />
     <Compile Include="dbRepositories\RepairRequestRepository.cs" />

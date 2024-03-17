@@ -101,7 +101,7 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
             this.Name = "Auth";
-            this.Text = "Auth";
+            this.Text = "Авторизация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

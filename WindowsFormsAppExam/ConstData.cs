@@ -7,7 +7,7 @@ using WindowsFormsAppExam.models;
 
 namespace WindowsFormsAppExam
 {
-    static internal class ConstDataDB
+    static internal class ConstData
     {
         public static readonly string HOST = "localhost";
         public static readonly string USER = "postgres";

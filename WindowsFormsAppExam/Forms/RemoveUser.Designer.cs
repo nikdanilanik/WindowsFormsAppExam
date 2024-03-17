@@ -80,7 +80,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "RemoveUser";
-            this.Text = "RemoveUser";
+            this.Text = "Удаление пользователя";
             this.ResumeLayout(false);
             this.PerformLayout();
 

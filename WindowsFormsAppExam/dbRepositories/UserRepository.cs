@@ -13,7 +13,7 @@ namespace WindowsFormsAppExam.dbRepositories
     {
         public void addUser(User user)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("INSERT INTO users (name, login, password, access) VALUES (@name ,@login, @password, @access)", con))
@@ -30,7 +30,7 @@ namespace WindowsFormsAppExam.dbRepositories
         }
         public void removeUserById(int id)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("DELETE FROM users WHERE id = @id", con))
@@ -45,7 +45,7 @@ namespace WindowsFormsAppExam.dbRepositories
         public List<User> getUsersByNameOrId(string findString)
         {
             List<User> users = new List<User>();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM users WHERE name LIKE '%' || @findString || '%' " +
@@ -83,7 +83,7 @@ namespace WindowsFormsAppExam.dbRepositories
         public List<User> getAllUsers()
         {
             List<User> users = new List<User>();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM users", con))
@@ -111,7 +111,7 @@ namespace WindowsFormsAppExam.dbRepositories
         public User getUserById(int id)
         {
             User user = new User();
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM users WHERE id = @id", con))
@@ -135,7 +135,7 @@ namespace WindowsFormsAppExam.dbRepositories
         }
         public void updateUser(User user)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("UPDATE users SET name = @name, login = @login, password = @password, access = @access WHERE id = @id", con))
@@ -153,7 +153,7 @@ namespace WindowsFormsAppExam.dbRepositories
         }
         public User getUserByPasswordAndLogin(string login, string password)
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("SELECT * FROM users WHERE login = @login AND password = @password", con))

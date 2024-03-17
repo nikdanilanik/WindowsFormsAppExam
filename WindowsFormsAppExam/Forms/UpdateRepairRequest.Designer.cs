@@ -236,7 +236,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxDateOfCreate);
             this.Name = "UpdateRepairRequest";
-            this.Text = "UpdateRepairRequest";
+            this.Text = "Обновление заявки";
             this.ResumeLayout(false);
             this.PerformLayout();
 

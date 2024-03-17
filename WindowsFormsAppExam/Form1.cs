@@ -19,7 +19,7 @@ namespace WindowsFormsAppExam
         public Form1()
         {
             InitializeComponent();
-            if (ConstDataDB.CURRENT_USER.access != "admin")
+            if (ConstData.CURRENT_USER.access != "admin")
             {
                 buttonListUsers.Visible = false;
                 deleteDefaultRepos.Visible = false;

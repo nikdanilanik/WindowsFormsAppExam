@@ -97,7 +97,7 @@
             this.Controls.Add(this.textBoxFind);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ListRepairRequest";
-            this.Text = "ListRepairRequest";
+            this.Text = "Список заявок";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

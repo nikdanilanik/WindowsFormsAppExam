@@ -18,11 +18,11 @@ namespace WindowsFormsAppExam.Forms
         public TrackRequest()
         {
             InitializeComponent();
-            if (ConstDataDB.TRACK_REQUEST != null)
+            if (ConstData.TRACK_REQUEST != null)
             {
-                ConstDataDB.TRACK_REQUEST = repairReques.getClientById(ConstDataDB.TRACK_REQUEST.id);
-                textBoxRequestId.Text = Convert.ToString(ConstDataDB.TRACK_REQUEST.id);
-                textBoxStatusRequest.Text = ConstDataDB.TRACK_REQUEST.requestStatus;
+                ConstData.TRACK_REQUEST = repairReques.getClientById(ConstData.TRACK_REQUEST.id);
+                textBoxRequestId.Text = Convert.ToString(ConstData.TRACK_REQUEST.id);
+                textBoxStatusRequest.Text = ConstData.TRACK_REQUEST.requestStatus;
             }
         }
 
@@ -30,8 +30,8 @@ namespace WindowsFormsAppExam.Forms
         {
             if (!string.IsNullOrEmpty(textBoxRequestId.Text))
             {
-                ConstDataDB.TRACK_REQUEST = repairReques.getClientById(Convert.ToInt32(textBoxRequestId.Text));
-                textBoxStatusRequest.Text = ConstDataDB.TRACK_REQUEST.requestStatus;
+                ConstData.TRACK_REQUEST = repairReques.getClientById(Convert.ToInt32(textBoxRequestId.Text));
+                textBoxStatusRequest.Text = ConstData.TRACK_REQUEST.requestStatus;
             }
         }
 

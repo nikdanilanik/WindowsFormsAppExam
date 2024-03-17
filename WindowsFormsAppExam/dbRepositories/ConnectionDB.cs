@@ -11,7 +11,7 @@ namespace WindowsFormsAppExam.dbRepositories
     {
         public void createDefaultRepos()
         {
-            using (var con = new NpgsqlConnection(ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection(ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("CREATE TABLE IF NOT EXISTS client (id SERIAL NOT NULL, name VARCHAR(50) NOT NULL, phone_number VARCHAR(12) NOT NULL, email VARCHAR(30), PRIMARY KEY(id));" +
@@ -25,7 +25,7 @@ namespace WindowsFormsAppExam.dbRepositories
         }
         public void deleteDefaultRepos()
         {
-            using (var con = new NpgsqlConnection (ConstDataDB.CONNSTRING))
+            using (var con = new NpgsqlConnection (ConstData.CONNSTRING))
             {
                 con.Open();
                 using (var command = new NpgsqlCommand("DROP TABLE IF EXISTS client, repair_request, users", con))

@@ -68,7 +68,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "SearchClientId";
-            this.Text = "SearchClientId";
+            this.Text = "Поиск клиента по ID";
             this.ResumeLayout(false);
             this.PerformLayout();
 
